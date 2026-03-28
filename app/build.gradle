@@ -9,15 +9,18 @@ android {
 
     defaultConfig {
         applicationId "com.example.hello"
-        minSdk 24
+        minSdk 19
         targetSdk 30
         versionCode 1
         versionName "1.0"
     }
 
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+        }
+        release {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
