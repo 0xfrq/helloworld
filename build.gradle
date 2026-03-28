@@ -1,46 +1,18 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-}
-
-android {
-
-    namespace 'com.example.hello'
-
-    compileSdk 34
-
-    defaultConfig {
-
-        applicationId "com.example.hello"
-
-        minSdk 24
-
-        targetSdk 34
-
-        versionCode 1
-
-        versionName "1.0"
-
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
     }
 
-    buildTypes {
-
-        release {
-
-            minifyEnabled false
-
-        }
-
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
     }
-
 }
 
-dependencies {
-
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-
-    implementation 'com.google.android.material:material:1.10.0'
-
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
